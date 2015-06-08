@@ -1,4 +1,6 @@
 class zsh {
+  include osx
+
   package { 'zsh': }
 
   file_line { 'add zsh to /etc/shells':
