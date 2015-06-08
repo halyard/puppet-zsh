@@ -1,4 +1,6 @@
 class zsh {
+  package { 'zsh': }
+
   file_line { 'add zsh to /etc/shells':
     path    => '/etc/shells',
     line    => "${boxen::config::homebrewdir}/bin/zsh",
