@@ -1,5 +1,8 @@
 class zsh {
-  package { 'zsh': }
+  package { [
+    'zsh',
+    'zsh-completions'
+  ]: }
 
   file_line { 'add zsh to /etc/shells':
     path    => '/etc/shells',
