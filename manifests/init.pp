@@ -1,3 +1,14 @@
+# == Class: zsh
+#
+# Set the shell to zsh
+#
+# === Parameters
+#
+# === Example
+#
+#   include zsh
+#
+
 class zsh {
   package { [
     'zsh',
