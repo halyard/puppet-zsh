@@ -21,8 +21,8 @@ class zsh {
     require => Package['zsh'],
   } ->
   file { '/etc/zprofile':
-    ensure   => present,
-    contents => ''
+    ensure  => present,
+    content => ''
   } ->
   osx_chsh { $::luser:
     shell   => "${boxen::config::homebrewdir}/bin/zsh",
