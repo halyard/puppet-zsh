@@ -19,10 +19,12 @@ class zsh {
     path    => '/etc/shells',
     line    => "${boxen::config::homebrewdir}/bin/zsh",
     require => Package['zsh'],
-  }
-
+  } ->
+  file { '/etc/zprofile':
+    ensure   => present,
+    contents => ''
+  } ->
   osx_chsh { $::luser:
     shell   => "${boxen::config::homebrewdir}/bin/zsh",
-    require => File_line['add zsh to /etc/shells'],
   }
 }
