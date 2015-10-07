@@ -1,0 +1,22 @@
+{
+  "name": "halyard-zsh",
+  "version": "2.8.4",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure zsh via Boxen",
+  "source": "https://github.com/halyard/puppet-zsh",
+  "project_page": "https://github.com/halyard/puppet-zsh",
+  "issues_url": "https://github.com/halyard/puppet-zsh/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemmajrelease": [
+        "14",
+        "15"
+      ]
+    }
+  ]
+}
