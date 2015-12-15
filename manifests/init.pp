@@ -17,14 +17,14 @@ class zsh {
 
   file_line { 'add zsh to /etc/shells':
     path    => '/etc/shells',
-    line    => "${boxen::config::homebrewdir}/bin/zsh",
+    line    => "${homebrew::config::homebrew_root}/bin/zsh",
     require => Package['zsh'],
   } ->
   file { '/etc/zprofile':
     ensure  => present,
     content => ''
   } ->
-  osx_chsh { $::luser:
-    shell   => "${boxen::config::homebrewdir}/bin/zsh",
+  osx_chsh { $::user:
+    shell   => "${homebrew::config::homebrew_root}/bin/zsh",
   }
 }
