@@ -6,6 +6,6 @@ item do
 
   actual do
     gemnasium
-    slug 'akerl/puppet-zsh'
+    slug 'halyard/puppet-zsh'
   end
 end
