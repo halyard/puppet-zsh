@@ -9,22 +9,27 @@
 #   include zsh
 #
 
-class zsh {
-  package { [
-    'zsh',
-    'zsh-completions'
-  ]: }
-
+class zsh (
+  $package = 'zsh',
+  $completion_package = 'zsh-completions',
+  $tap = undef,
+  $install_completions = true
+) {
+  homebrew::package { $package:
+    tap => $tap
+  } ->
   file_line { 'add zsh to /etc/shells':
-    path    => '/etc/shells',
-    line    => "${homebrew::config::homebrew_root}/bin/zsh",
-    require => Package['zsh'],
+    path => '/etc/shells',
+    line => "${homebrew::rootdir}/bin/zsh",
   } ->
   file { '/etc/zprofile':
     ensure  => present,
     content => ''
-  } ->
-  osx_chsh { $::user:
-    shell   => "${homebrew::config::homebrew_root}/bin/zsh",
+  }
+
+  if $install_completions {
+    homebrew::package { $completion_package:
+      tap => $tap,
+    }
   }
 }
