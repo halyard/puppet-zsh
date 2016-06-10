@@ -1,6 +1,6 @@
 {
   "name": "halyard-zsh",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure zsh via Boxen",
