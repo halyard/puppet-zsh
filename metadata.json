@@ -11,10 +11,6 @@
     {
       "name": "halyard/homebrew",
       "version_requirement": "2.0.x"
-    },
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": "4.12.x"
     }
   ],
   "operatingsystem_support": [
