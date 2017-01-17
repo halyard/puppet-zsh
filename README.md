@@ -16,5 +16,3 @@ include zsh
 
 ## Required Puppet Modules
 
-* `boxen`
-
