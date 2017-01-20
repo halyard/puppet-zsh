@@ -1,6 +1,6 @@
 {
   "name": "halyard-zsh",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure zsh via homebrew",
@@ -8,6 +8,7 @@
   "project_page": "https://github.com/halyard/puppet-zsh",
   "issues_url": "https://github.com/halyard/puppet-zsh/issues",
   "dependencies": [
+
   ],
   "operatingsystem_support": [
     {
