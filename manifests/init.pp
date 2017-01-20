@@ -25,7 +25,7 @@ class zsh (
     ensure  => present,
     content => ''
   } ->
-  osx_shell { $id:
+  osx_shell { $::id:
     shell => "${homebrew::path}/bin/zsh"
   }
 
