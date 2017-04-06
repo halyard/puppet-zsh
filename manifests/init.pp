@@ -16,16 +16,16 @@ class zsh (
 ) {
   package { $package:
     provider => brew
-  } ->
-  file_line { 'add zsh to /etc/shells':
+  }
+  -> file_line { 'add zsh to /etc/shells':
     path => '/etc/shells',
     line => "${homebrew::path}/bin/zsh",
-  } ->
-  file { '/etc/zprofile':
+  }
+  -> file { '/etc/zprofile':
     ensure  => present,
     content => ''
-  } ->
-  osx_shell { $::id:
+  }
+  -> osx_shell { $::id:
     shell => "${homebrew::path}/bin/zsh"
   }
 
